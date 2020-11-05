@@ -5,8 +5,8 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-columns:repeat(5, 1fr);
-  grid-template-rows: 15vh 20% 20% 20% 20%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: minmax(15vh, 100px) 20% 20% 20% 20%;
   min-height: 100vh;
   max-width: 100vw;
 }
@@ -17,14 +17,28 @@ header {
   grid-row: 1/2;
   background-color: black;
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) repeat(4,1fr);
+  grid-template-columns: minmax(300px, 1fr) repeat(3, 1fr);
   align-items: center;
+  justify-items: center;
 }
-
 
 header img {
   width: 100%;
-  
+}
+
+header a {
+  color: white;
+  text-decoration-line: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 150%;
+}
+
+#Events {
+  grid-column: 2/3;
+}
+
+#Staff {
+  grid-column: 3/4;
 }
 
 p {
