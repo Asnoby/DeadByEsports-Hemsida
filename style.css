@@ -16,16 +16,20 @@ header {
   grid-column: 1/6;
   grid-row: 1/2;
   background-color: black;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) repeat(2, 0.75fr) repeat(3, 0.25fr) 0.6fr; 
+  grid-template-columns: minmax(300px, 1fr) repeat(2, 0.75fr) repeat(3, 0.25fr) 0.6fr;
   grid-template-rows: 100%;
   align-items: center;
   justify-items: center;
-  
 }
 
 header img {
   width: 100%;
+}
+
+.icon {
+  display: none;
 }
 
 header a {
@@ -37,29 +41,29 @@ header a {
 }
 
 header a:hover {
-  transform: scale(1.25);
+  transform: scale(1.2);
 }
 
-#dbe:hover{
+#dbe:hover {
   transform: scale(1.05);
 }
 
-#WatchLive:hover{
-  transform: scale(1.1);
+#WatchLive:hover {
+  transform: scale(1.05);
 }
 
 #Lankb {
-  grid-column:5/6;
+  grid-column: 5/6;
   grid-row: 1/2;
   max-width: 25%;
-  min-width: 40px; 
+  min-width: 40px;
 }
 
 #Lanka {
-  grid-column:6/7;
+  grid-column: 6/7;
   grid-row: 1/2;
   max-width: 30%;
-  min-width: 50px; 
+  min-width: 50px;
 }
 
 #Events {
@@ -77,8 +81,33 @@ header a:hover {
   border-style: solid;
 }
 
-
 p {
   color: white;
   font-size: 20px;
+}
+
+@media screen and (max-width: 740px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    grid-column: 7/8;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .topnav.responsive {
+    grid-template-rows: 100% repeat(3, 75px);
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
