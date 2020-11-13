@@ -8,17 +8,38 @@
   />
 </head>
 <body>
-  <header>
-    <a href="HomePage.html"
-      ><img src="Bilder/DeadByEsports.png" alt="DeadByEsports"
+  <header class="topnav" id="myTopnav">
+    <a id="dbe" href="HomePage.html"
+      ><img class="active" src="Bilder/DeadByEsports.png" alt="DeadByEsports"
     /></a>
+    <div id = "Expansion"></div>
     <a id="Events" href="Events.Html">Events</a>
     <a id="Staff" href="Staff.html">Staff</a>
-    <a id="Lanka" href="https://discord.gg/7YRbDKgN"
+    <a id="Lanka" href="https://discord.com/invite/pM3R8Gt"
       ><img src="Bilder/Discord.png" alt="Discord Länk"
     /></a>
-    <a id="Lankb" href="https://twitter.com/deadbyesports"
+    <a id="Lankb" class="Menu" href="https://twitter.com/deadbyesports"
       ><img src="Bilder/Twitter.png" alt="Twitter Länk"
     /></a>
+    <a id="WatchLive" class="Menu" href="https://trovo.live/Boomer_Live"
+      >Watch Live</a
+    >
+    <a class="icon" onclick="myFunction()" href="javascript:void(0)">
+      <img src="bilder/Menu.png" alt="Menu" />
+    </a>
+
+    
   </header>
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 </body>
