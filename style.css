@@ -167,9 +167,9 @@ header a:hover {
 
 #AboutUs {
   align-self: center;
-  grid-row: 2/3;
+  grid-row: 3/4;
   grid-column: 1/4;
-  padding: 40px;
+  padding: 50px;
 }
 
 #Lantern {
